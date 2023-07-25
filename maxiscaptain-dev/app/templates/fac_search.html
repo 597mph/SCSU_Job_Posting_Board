@@ -1,0 +1,28 @@
+{% extends "fac_base.html" %}
+{% block content %}
+<table style="margin: 30px auto 50px auto;">
+    <tr>
+        <th colspan="2" style="border-bottom: 1px solid black;"><h1><b>{{user.username}}</b></h1></th>
+    </tr>
+            
+    <tr>
+        <td style="padding-right:150px;">
+            <ul>
+                <li style="list-style:none; line-height:20px;">User Name:           {{ user.username }}</li>
+                <li style="list-style:none; line-height:20px;">Role:                {{ user.role }}</li>
+                <li style="list-style:none; line-height:20px;">Email:               {{ user.email }}</li>
+                <li style="list-style:none; line-height:20px;">First Name:          {{ user.first }}</li>
+                <li style="list-style:none; line-height:20px;">Last Name:           {{ user.last }}</li>
+                <li style="list-style:none; line-height:20px;">Student ID:          {{ user.user_id }}</li>
+                <li style="list-style:none; line-height:20px;">Major:               {{ user.major }}</li>
+                <li style="list-style:none; line-height:20px;">Grade:               {{ user.grade }}</li>
+                <li style="list-style:none; line-height:20px;">Address:             {{ user.address }}</li>
+                <li style="list-style:none; line-height:20px;">Telephone:           {{ user.phone }}</li>
+            </ul>
+        </td>
+    </tr>
+            <tr>
+                <td colspan="2"><hr></td>
+            </tr>
+        </table>
+{% endblock %}

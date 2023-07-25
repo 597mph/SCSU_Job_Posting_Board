@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
+{% block title %}Sign Up Portal{% endblock %}
+
+{% block content %}
+
+{% for message in get_flashed_messages() %}
+    <p style="background-color:rgb(0, 0, 0); color:white; font-size:16px;"> {{ message }} </p>  
+{% endfor %}
+<div>
+	<table style="margin: 30px auto 50px auto; width:400px;">
+		<tr>
+		<td>
+			<h2>Sign Up</h2>
+			{{ wtf.quick_form(form) }}
+		</td>
+		</tr>
+	</table>
+</div>
+{% endblock %}

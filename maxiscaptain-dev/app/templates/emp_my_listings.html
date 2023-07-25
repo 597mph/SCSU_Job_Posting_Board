@@ -1,0 +1,47 @@
+{% extends "emp_base.html" %}
+{% block title %}My Listings{% endblock %}
+{% block content %}
+<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/emp_listings_css.css') }}">
+    <form action="" method="post">
+        <table>
+            <tr>
+            <th><h1>My Listings</h1></th>
+            <th><h1>Applicants</h1></th>
+            </tr>
+            
+            <tr>
+            <td>
+            {% for entry in cur %}
+                <ul>
+                    <li class="liHeading"><h2>{{ entry.title }}</h2></li>
+                    <li class="liLists">Listing ID:          {{ entry.id }}</li>
+                    <li class="liLists">Employer Phone:      {{ entry.phone }}</li>
+                    <li class="liLists">Employer Email:      {{ entry.email }}</li>
+                    <li class="liLists">Listing Description: {{ entry.text }}</li>
+                    <li class="liLists">Listing Author:      {{ entry.username }}</li>
+                    <li class="liLists">Author ID:           {{ entry.user_id }}</li>
+                    <li class="liLists">Listing Posted:      {{ entry.datetime }}</li>
+                <hr>
+                </ul>
+            {% endfor %}
+            </td>
+            <td valign="top">      
+            {% for applicant in applicants %}
+                <ul>
+                    <li class="liHeading"><h2 style="font-family:'Times New Roman', Times, serif;">{{ applicant.first }} {{ applicant.last }}</h2></li>
+                    <li class="liLists">Applicant ID: {{ applicant.user_id }}</li>
+                    <li class="liLists">Applied to Listing ID: {{ applicant.entry_id }}</li>  
+                    <input class="button" style="border-color:black; background-color:white; border-radius:5px;" type="submit" value="{{applicant.username}}", name="profile">
+                    <br>
+                    <input class="button" style="border-color:black; background-color:white; border-radius:5px;" type="submit" value="Delete Application ID: {{applicant.id}}", name="delete">
+                    <br>
+                    <input class="button" style="border-color:black; background-color:white; border-radius:5px;" type="submit" value="Contact Student", name="mail"> 
+                    <hr>
+                </ul>  
+            {% endfor %}      
+            </td>
+            </tr>
+        </table>
+    </form>
+{% endblock %}
+

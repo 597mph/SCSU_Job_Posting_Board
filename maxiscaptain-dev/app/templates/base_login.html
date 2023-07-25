@@ -1,0 +1,32 @@
+<html>
+	<head>
+		<style>
+		table, th, td {
+			border: 1px solid black;
+			border-collapse: collaspe;
+		}
+		th, td {
+			padding: 5px;
+		}
+		th {
+			text-align: left;
+		}
+		</style>
+		<title>Student Portal</title>
+	</head>
+
+	<body>
+		<h1>Student Portal</h1>
+		<hr>
+		<div>
+		<a href="/updateprofile">Update Profile</a> -
+		<a href="/changepassword">Change Password</a> - 
+		<a href="/view_listings">View Listings</a> - 
+		<a href="/view_faculty">View Faculty Profiles</a> - 
+		<a href="delete">Delete Profile</a> -
+		<a href="logout">Log Out</a>
+		</div>
+		<hr>
+		{% block content %}{% endblock %}
+	</body>
+</html>

@@ -1,0 +1,43 @@
+{% extends "stu_base.html" %}
+{% include "table_base.html" %}
+
+{% block content %}
+<table id="data" class="table table-striped">
+    <thead>
+        <tr>
+            <th>First</th>
+            <th>Last</th>
+            <th>Address</th>
+            <th>Phone</th>
+            <th>Email</th>
+            <th>School</th>
+            <th>Department</th>
+            <th>Office</th>
+        </tr>
+    </thead>
+
+    <tbody>
+    </tbody>
+</table>
+{% endblock %}
+
+{% block scripts %}
+<script>
+    $(document).ready(function() {
+        $('#data').DataTable({
+            ajax: '/api/data_fac',
+            serverSide: true,
+            columns: [
+                {data: 'first', orderable: true, searchable: true},
+                {data: 'last', orderable: true, searchable: true},
+                {data: 'address', orderable: true, searchable: true},
+                {data: 'phone', orderable: true, searchable: true},
+                {data: 'email', orderable: true, searchable: true},
+                {data: 'school', orderable: true, searchable: true},
+                {data: 'department', orderable: true, searchable: true},
+                {data: 'office', orderable: true, searchable: true},
+            ],
+        });
+    });
+</script>
+{% endblock %}

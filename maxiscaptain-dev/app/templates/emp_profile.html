@@ -1,0 +1,34 @@
+{% extends "emp_base.html" %}
+{% block title %}Employer Portal{% endblock %}
+{% block content %}
+
+{% for message in get_flashed_messages() %}
+    <p style="background-color:white; color:red; font-size:16px;"> {{ message }} </p>  
+{% endfor %}
+
+<div>
+        <table style="margin: 30px auto 50px auto;">
+            <tr>
+            <th colspan="2" style="border-bottom: 1px solid black;"><h1><b>{{user.username}}</b></h1></th>
+            </tr>
+            
+            <tr>
+            <td style="padding-right:150px;">
+                <ul>
+                    <li style="list-style:none; line-height:20px;">First Name:          {{ profile.first }}</li>
+                    <li style="list-style:none; line-height:20px;">Last Name:           {{ profile.last }}</li>
+                    <li style="list-style:none; line-height:20px;">Organization:        {{ profile.organization }}</li>
+                    <li style="list-style:none; line-height:20px;">Title:               {{ profile.title }}</li>
+                    <li style="list-style:none; line-height:20px;">Expertise:           {{ profile.expertise }}</li>
+                    <li style="list-style:none; line-height:20px;">Email:               {{ profile.email }}</li>
+                    <li style="list-style:none; line-height:20px;">Phone:               {{ profile.phone }}</li>
+                    <li style="list-style:none; line-height:20px;">Address:             {{ profile.address }}</li>
+                </ul>
+            </td>
+            </tr>
+            <tr>
+                <td colspan="2"><hr></td>
+            </tr>
+        </table>
+</div>
+{% endblock %}

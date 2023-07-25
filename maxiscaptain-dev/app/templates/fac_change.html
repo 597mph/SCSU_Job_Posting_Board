@@ -1,0 +1,21 @@
+{% extends "fac_base.html" %}
+{% block title %}Faculty Portal{% endblock %}
+{% import "bootstrap/wtf.html" as wtf %}
+{% block content %}
+
+{% for message in get_flashed_messages() %}
+    <p style="background-color:white; color:red; font-size:16px;"> {{ message }} </p>  
+{% endfor %}
+
+<table style="margin: 30px auto 50px auto;">
+	<tr>
+	<td>
+	<h2>Change Password</h2>
+	<hr>
+			<form action="" method="post">
+				{{ wtf.quick_form(form) }}
+			</form>
+	<hr>
+</td>
+</tr>
+{% endblock %}

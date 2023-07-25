@@ -1,0 +1,40 @@
+{% extends "fac_base.html" %}
+{% block title %}Faculty Portal{% endblock %}
+{% block content %}
+
+{% for message in get_flashed_messages() %}
+    <p style="background-color:white; color:red; font-size:16px;"> {{ message }} </p>  
+{% endfor %}
+
+        <table style="margin: 30px auto 50px auto;">
+            <tr>
+            <th colspan="2" style="border-bottom: 1px solid black;"><h1><b>{{user.username}}</b></h1></th>
+            </tr>
+            
+            <tr>
+            <td style="padding-right:200px;">
+                <ul>
+                    <li style="list-style:none; line-height:20px;">First Name:          {{ profile.first }}</li>
+                    <li style="list-style:none; line-height:20px;">Last Name:           {{ profile.last }}</li>
+                    <li style="list-style:none; line-height:20px;">School:              {{ profile.school }}</li>
+                    <li style="list-style:none; line-height:20px;">Department:          {{ profile.department }}</li>
+                    <li style="list-style:none; line-height:20px;">Office:              {{ profile.office }}</li>
+                    <li style="list-style:none; line-height:20px;">Email:               {{ profile.email }}</li>
+                    <li style="list-style:none; line-height:20px;">Phone:               {{ profile.phone }}</li>
+                    <li style="list-style:none; line-height:20px;">Address:             {{ profile.address }}</li>
+                </ul>
+            </td>
+            <td valign="top">      
+                {% for post in posts %}
+                <p style="margin-top:10px;">
+                    {{ post.author.username }} says: <b>{{ post.body }}</b>
+                </p>
+                {% endfor %}   
+            </td>
+            </tr>
+            <tr>
+                <td colspan="2"><hr></td>
+            </tr>
+        </table>
+
+{% endblock %}

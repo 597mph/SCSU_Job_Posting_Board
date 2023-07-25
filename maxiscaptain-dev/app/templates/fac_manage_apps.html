@@ -1,0 +1,32 @@
+{% extends 'fac_base.html' %}
+
+{% block content %}
+<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/listings_css.css') }}">
+<form action="" method="post">
+    <table class="liListstable">
+        <tr>
+            <th class="liListsth"><h1 class="liListsh1">Manage Student Applications</h1></th>
+        </tr>
+    <form action="" method="post">
+        <tr>
+        <td class="liListstd">
+            {% for app in applications %}
+            <ul>
+                <li class="liHeading"><h2 class="liListsh2">{{ app.first }} {{ app.last }}</h2></li>
+                <li class="liLists">{{ app.entry_id }} - {{ app.username }}</li>
+                <li class="liLists">{{ app.entry_text }} </li>
+                <hr>
+                <div class="liButton">
+                <input class="button" style="border-color:black; background-color:white; border-radius:5px;" type="submit" value="Accept {{app.id}}", name="accept">
+                <input class="button" style="border-color:black; background-color:white; border-radius:5px;" type="submit" value="Decline {{app.id}}", name="decline">
+                </div>
+                <hr>
+            </ul>
+            {% endfor %}
+        </td></tr>
+    </form>
+</table>
+{% endblock %}
+
+
+

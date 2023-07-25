@@ -1,0 +1,11 @@
+{% extends "stu_base.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
+
+{% block title %}Contact User{% endblock %}
+
+{% block page_content %}
+<div class="page-header">
+    <h1>Send Mail</h1>
+</div>
+{{ wtf.quick_form(form) }}
+{% endblock %}

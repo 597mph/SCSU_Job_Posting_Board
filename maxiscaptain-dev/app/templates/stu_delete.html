@@ -1,0 +1,22 @@
+{% extends "stu_base.html" %}
+{% block title %}Student Portal{% endblock %}
+{% import "bootstrap/wtf.html" as wtf %}
+{% block content %}
+
+{% for message in get_flashed_messages() %}
+    <p style="background-color:white; color:red; font-size:16px;"> {{ message }} </p>  
+{% endfor %} 
+
+<table style="margin: 30px auto 50px auto;">
+	<tr>
+	<td>
+	<h3>Delete Profile</h3> <h4 style='color:red'>Warning! This Cannot Be Undone!</h3>
+	<hr>
+		<form action="" method="post">
+			{{ wtf.quick_form(form) }}
+		</form>
+	<hr>
+	</td>
+</tr>
+</table>
+{% endblock %}

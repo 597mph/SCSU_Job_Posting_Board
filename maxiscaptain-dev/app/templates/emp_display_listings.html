@@ -1,0 +1,27 @@
+{% extends "emp_base.html" %}
+{% block title %}Opportunities{% endblock %}
+{% block content %}
+<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/listings_css.css') }}">
+<form action="" method="post">
+    <table class="liListstable">
+        <tr>
+            <th class="liListsth"><h1 class="liListsh1">Opportunities</h1></th>
+        </tr>
+    <form action="" method="post">
+        <tr>
+        <td class="liListstd">
+            {% for entry in cur %}
+                <li class="liHeading"><h2 class="liListsh2">{{ entry.title }}</h2></li>
+                <li class="liLists">Description: {{ entry.text }}</li>
+                <li class="liLists">Author ID: {{ entry.user_id }}</li>
+                <li class="liLists">Author Username: {{ entry.username }}</li>
+                <li class="liLists">Author Email: {{ entry.email }}</li>
+                <li class="liLists">Author Phone: {{ entry.phone }}</li>
+                <li class="liLists">Authored: {{ entry.datetime }}</li>
+                <hr>
+                <hr>
+            {% endfor %}
+        </td></tr>
+    </form>
+</table>
+{% endblock %}

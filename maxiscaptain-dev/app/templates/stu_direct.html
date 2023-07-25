@@ -1,0 +1,23 @@
+{% extends "stu_base.html" %}
+
+{% block content %}
+<style>
+    p {
+        text-align: center;
+        margin-top: 30px;
+    }
+</style>
+<table style="margin: 30px auto 50px auto;">
+<tr>
+<td>
+<h2>Directories</h2>
+<hr>
+<p><button type='button' style="border-color:black; background-color:white; border-radius:5px;"><a href="/stu_direct_table_stu" style="text-decoration:none; color:black;">Student Directory</a></button></p>
+<p><button type='button' style="border-color:black; background-color:white; border-radius:5px;"><a href="/stu_direct_table_fac" style="text-decoration:none; color:black;">Faculty Directory</a></button></p>
+<p><button type='button' style="border-color:black; background-color:white; border-radius:5px;"><a href="/stu_direct_table_emp" style="text-decoration:none; color:black;">Employer Directory</a></button></p>
+<p><button type='button' style="border-color:black; background-color:white; border-radius:5px;"><a href="/stu_mail" style="text-decoration:none; color:black;">Send Mail</a></button></p>
+</td>
+</tr>
+</table>
+{% endblock %}
+
