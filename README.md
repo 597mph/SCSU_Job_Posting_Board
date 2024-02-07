@@ -30,21 +30,21 @@ Instructions to run the application
 STEP 0: This assumes that you have a database named population already created.
 
 STEP 1: Install the Flask login and security modules from the command line:
-
-     ``sudo pip3 install flask_login werkzeug``
+        
+        sudo pip3 install flask_login werkzeug
 
 STEP 2: Go to the project home directory, and edit .flaskenv accordingly.
         Update the database variables to the appropriate values.
         Save your edits and quit micro.
 
 STEP 3: Run the Flask application from the project home directory:
-     
-     ```flask run```
+        
+        flask run
 
 STEP 4: Login credentials for application:
 
-     ```Admin user  : admin   password: csc330sp22```
-     ```Regular user: user    password: csc330sp22```
+        Admin user  : admin   password: csc330sp22
+        Regular user: user    password: csc330sp22
 
 Thank you.
 
