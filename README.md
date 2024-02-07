@@ -36,16 +36,17 @@ STEP 1: Install the Flask login and security modules from the command line:
 STEP 2: Go to the project home directory, and edit .flaskenv accordingly.
         Update the database variables to the appropriate values.
         Save your edits and quit micro.
-
+<br><br>
 STEP 3: Run the Flask application from the project home directory:
-        
+<br><br>        
         flask run
-
+<br><br>
 STEP 4: Login credentials for application:
-
+<br><br>
         Admin user  : admin   password: csc330sp22
+        <br>
         Regular user: user    password: csc330sp22
-
+<br><br>
 Thank you.
-
+<br><br>
 Developed by Maxwell Hauser, Cara C., Maxi K., Steve M. and Brec A.
