@@ -26,8 +26,7 @@ process. This project is a great preview of what goes on in the real computer sc
 world.
 <hr>
 Instructions to run the application
-
-
+<br>
 STEP 0: This assumes that you have a database named population already created.
 
 STEP 1: Install the Flask login and security modules from the command line:
