@@ -31,7 +31,7 @@ STEP 0: This assumes that you have a database named population already created.
 
 STEP 1: Install the Flask login and security modules from the command line:
 
-     ```sudo pip3 install flask_login werkzeug```
+     ``sudo pip3 install flask_login werkzeug``
 
 STEP 2: Go to the project home directory, and edit .flaskenv accordingly.
         Update the database variables to the appropriate values.
