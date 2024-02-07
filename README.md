@@ -26,13 +26,13 @@ process. This project is a great preview of what goes on in the real computer sc
 world.
 <hr>
 Instructions to run the application
-<br>
+<br><br>
 STEP 0: This assumes that you have a database named population already created.
-
+<br><br>
 STEP 1: Install the Flask login and security modules from the command line:
-        
+<br><br>        
         sudo pip3 install flask_login werkzeug
-
+<br><br>
 STEP 2: Go to the project home directory, and edit .flaskenv accordingly.
         Update the database variables to the appropriate values.
         Save your edits and quit micro.
