@@ -43,9 +43,13 @@ STEP 3: Run the Flask application from the project home directory:
 <br><br>
 STEP 4: Login credentials for application:
 <br><br>
-        Admin user  : admin   password: csc330sp22
+        Admin user: admin
         <br>
-        Regular user: user    password: csc330sp22
+        password: csc330sp22
+        <br><br>
+        Regular user: user
+        <br>
+        password: csc330sp22
 <br><br>
 Thank you.
 <br><br>
